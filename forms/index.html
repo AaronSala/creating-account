@@ -1,54 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="style.css" type="text/css" rel="stylesheet"?>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
 </head>
 <body>
-    
-    <div id="header"><h1> The arfrim Technologies</h1></div>
-    <div id="nav">nagator</div>
- <div  id="container" >
-    <form id="valid" method="post" class="form">
-        <div id="error">tis error</div>
-
-        <lebal for="name">Name</lebal> 
-        <input type="text" id="fname" name="fisrtname" required >
-           <i class="fas fa-check-circle"></i>
-           <i class="fas fa-exclamation-circle"></i>
-           <small>error message</small></p>
-
-        <lebal for="other name">Other Names</lebal>
-        <input type="text" id="onames" name="othernane" required>
-        <i class="fas fa-check-circle"></i>
-           <i class="fas fa-exclamation-circle"></i>
-           <small>error message</small></p>
-
-        <lebal for="email">email</lebal>
-        <input type="email" id="email" name="email" required>
-        <i class="fas fa-check-circle"></i>
-           <i class="fas fa-exclamation-circle"></i>
-           <small>error message</small></p>
-
-        <lebal for="password">password</lebal>
-        <input type="password" id="password" name="password">
-        <i class="fas fa-check-circle"></i>
-           <i class="fas fa-exclamation-circle"></i>
-           <small>error message</small></p>
-
-       <lebal for="pass2">Confirm Password</lebal> 
-       <input type="password" id="password" name="confirmPass"> 
-       <i class="fas fa-check-circle"></i>
-           <i class="fas fa-exclamation-circle"></i>
-           <small>error message</small></p>
-        
-        <input type="button" id="button" value="submit">
+   <form id="loginForm">
+      <label for="username">Email:</label>
+      <input type="email" id="username" name="username">
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      
+      <button type="submit">Login</button>
     </form>
-    </div>
-    <div id="footer">footer</div>
-    <script src="index.js"></script>
+    <p id="error"></p>
 </body>
+<script src = "index.js"></script>
 </html>

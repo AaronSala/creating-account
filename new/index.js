@@ -1,23 +1,45 @@
+form= document.forms.form;
+var nameError = document.getElementById('usererror');
+var passError = document.getElementById('passerror');
 
-function setUpEvents(){
 
-var content= document.getElementById("content");
-var button= document.getElementById("show-more");
+user.addEventListener= ('textInput', validated);
+pass.addEventListener= ('textInput', validated);
 
-button.onclick = function(){
-    if(content.className =='open'){
-        //shrink the box
-    content.className='';
-    button.innerHTML="show ,more";
-    }
-    else{
-        //expand the box
-      content.className='open';
-      button.innerHTML='show less';
-    }
-};
+
+function validated(){
+    var name = document.getElementById('user');
+if(name.value == ""){
+    
+   nameError.innerHTML= 'Name cant b empty';
+   user.style.border='1px solid red';
+   usererror.style.display='block';
+   return false
+    
+}
+else{
+    name.style.border='3px solid green';
+    
+    usererror.style.display='none';
+    return true;
+}
 }
 
-window.onload=function(){
-    setUpEvents();
+var pass = document.getElementById('pass');
+if(pass.value == ""){
+    
+   passError.innerHTML= 'Name cant be empty';
+   pass.style.border='1px solid red';
+   passError.style.display='block';
+   return false
+    
 }
+else{
+    pass.style.border='3px solid green';
+    
+    passError.style.display='none';
+    return true;
+}
+
+
+

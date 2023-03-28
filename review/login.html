@@ -5,35 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="style.css " type="text/css" rel="stylesheet">
 </head>
 <body>
     <style>
         body{
-           
             display: block;
-            align-items: center;
+            text-align: center;
             background-color: lightblue;
         }
         .container{
-            align-items: center;
+            
             background-color: rgb(252, 250, 247);
             width: 40%;
             float: center;
-            margin-left: 30%;
+            margin-left: 500px;
             display: block;
         }
         .img img{
-            width: 300px;
-            height: 300px;
+            width: 330px;
+            height: 330px;
             
-          margin-left: 10%;
-           align-items: center;
+           
+           margin-left: 25%;
            border-radius: 50%;
         }
         .form{
           
-            background-color: rgb(233, 243, 243);
+            background-color: rgb(193, 242, 242);
             height: 90%;
             margin-top: 30px;
             padding-top: 30px ;
@@ -87,19 +85,18 @@
 
     </style>
     <div id="container" class="container">
-        <form class="form" id="form" name="form" >
+        <form class="form" id="form" name="form" method="post" onsubmit="return valted()">
             <div class="img" background-image="">
                 <img src="../images/download.png">
                 
               </div>
           
         <label for="username"><b>UserName</b></label><br>
-            <input type="text" id="user" name="user" placeholder="Enter username" onkeyup="validateName()"><br>
-            <error class="error" id="usererror">name error</error><br>
-
+            <input type="text" id="user" name="user" placeholder="Enter username" required><br>
+            <error class="error" id="usererror">please fill the eusername</error><br>
          <label for="password" ><b>password</b></label> <br>
-            <input type="password" id="pass" name="pass" placeholder="Enter Password" onkeyup="validatePass()" ><br>
-            <error class="error" id="passerror">pass error</error><br>
+            <input type="password" id="pass" name="pass" placeholder="Enter Password" required><br>
+            <error class="error" id="passerror">please fill the password</error><br>
             <button class="login" id="button"  onclick="validated()">login</button><br>
             
            <label>
@@ -111,7 +108,63 @@
             <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
     </div>
+    <script  >
+
+
+var form=document.forms.form;
+ var usererror=document.getElementById("usererror");
+ var passerror=document.getElementById("passerror");
+ var user=document.getElementById("user");
+ var pass=document.getElementById('pass');
+ var button=document.getElementById('button');
+ 
+
+user.addEventListener= ('textInput', user_verify);
+pass.addEventListener= ('textInput', user_verify);
+
+
+function validated(){
+     if(user.value==""){
+      
+    user.style.border='1px solid red';
+    usererror.style.display="block";
+    user.focus();
+     return false;
+     }
+     if(user.value>5){
+        user.style.border='1px solid green';
+        usererror.style.display='none';
+     }
+    
+  if(pass.value==""){
+    
+     pass.style.border='1px solid red';
+    passerror.style.display="block";
+     pass.focus();
+    return false;
+ }
+}
+
+  function user_verify(){
+     if(user.value.length>5){
+        user.style.border='1px solid green';
+     usererror.style.display="none";
+   
+      return true;
+    }
+}
+   
+
+//   function pass_verify(){
+//     if(pass.value.length>5){
+//         pass.style.border='1px solid green';
+//     usererror.style.display="none";
+   
+//      return true;
+//     }
+//   }
   
-    <script src="index.js"></script>
+    
+    </script>
 </body>
 </html>

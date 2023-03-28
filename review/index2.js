@@ -1,33 +1,18 @@
-// let person={
-//     firstName:'john',
-//     lastName:'mwania',
-//     age:34,
-//     fullName: function(){
-//        return this.firstName+' '+this.lastName;
-//     }
-    
-// };
-//console.log(person.fullName);
 
-const person = {
-    firstName: "John",
-    lastName : "Doe",
-    age       : 56,
-    get fullName () {
-      return this.firstName + " " + this.lastName;
-    }
-    
-  };
-  for(let y in person) {
-      console.log(person[y]);
+const max1=function (n1,n2, n3){
+  let max=0;
+  if(n1>n2){
+    max=n1;
   }
-  console.log(person.firstName +' is ' +person.age+ ' years old');
+  else {
+    max=n2;
+  }
+  if(n3>max) {
+    max=n3 
+  }
+ 
 
-  const perso = {
-    firstName: "John",
-    lastName: "Doe",
-    id: 5566,
-  };
-  perso.name = function() {
-    return this.firstName + " " + this.lastName;
-  };
+return max;
+}
+
+console.log(max1(2223, 1121, 452));
